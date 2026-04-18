@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="eos_ic_settings_color">@color/fluentui_white</color>
+    <color name="fluentui_white"></color>
+    <color name="settings_color_onPrimary">@android:color/system_accent1_0</color>
+    <color name="settings_color_onSurface">@android:color/system_neutral1_900</color>
+</resources>

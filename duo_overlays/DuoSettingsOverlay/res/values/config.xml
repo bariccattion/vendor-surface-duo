@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <item name="config_activity_embed_split_ratio" format="float" type="dimen">0.5</item>
+</resources>

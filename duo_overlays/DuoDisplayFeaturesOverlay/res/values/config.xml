@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="config_device_state_postures" translatable="false">
+        <item>0:1</item> <!-- CLOSED -->
+        <item>1:2</item> <!-- HALF_OPEN -->
+        <item>2:3</item> <!-- FLAT -->
+        <item>3:4</item> <!-- FLIPPED -->
+    </string-array>
+    <integer-array name="config_foldedDeviceStates" translatable="false">
+        <item>3</item> <!-- FOLDED -->
+    </integer-array>
+
+    <bool name="config_lidControlsSleep">true</bool>
+
+    <bool name="config_deviceTabletModeEnabled">false</bool>
+
+    <integer-array name="config_deviceTabletopRotations">
+        <item>90</item>
+        <item>270</item>
+    </integer-array>
+
+    <integer name="config_letterboxBackgroundType" translatable="false">0</integer> <!-- Solid color -->
+    <item name="config_letterboxHorizontalPositionMultiplier" format="float" type="dimen">0</item>
+    <item name="config_letterboxVerticalPositionMultiplier" format="float" type="dimen">0.5</item>
+    <bool name="config_letterboxIsPolicyForIgnoringRequestedOrientationEnabled" translatable="false">true</bool>
+
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">40px</dimen>
+    <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
+    <!-- <dimen name="rounded_corner_radius_adjustment">10px</dimen> -->
+
+    <!-- Indicates whether to enable an animation when unfolding a device or not -->
+    <bool name="config_unfoldTransitionEnabled">true</bool>
+
+    <!-- Indicates whether to enable hinge angle sensor when using unfold animation -->
+    <bool name="config_unfoldTransitionHingeAngle">true</bool>
+    
+    <!-- Radius of the software rounded corners at the top of primary display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <!-- <dimen name="rounded_corner_radius_top">52px</dimen> -->
+
+    <!-- Radius of the software rounded corners at the bottom of primary display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <!-- <dimen name="rounded_corner_radius_bottom">48px</dimen> -->
+
+        <!-- Top adjustment for the software rounded corners since corners are not perfectly
+        round.  This value is used when retrieving the "radius" of the top rounded corner in cases
+        where the exact bezier curve cannot be retrieved.  This value will be subtracted from
+        rounded_corner_radius_top to more accurately provide a "radius" for the top rounded corners.
+         -->
+    <!-- <dimen name="rounded_corner_radius_top_adjustment">5px</dimen> -->
+
+    <!-- Bottom adjustment for the software rounded corners since corners are not perfectly
+        round.  This value is used when retrieving the "radius" of the bottom rounded corner in
+        cases where the exact bezier curve cannot be retrieved.  This value will be subtracted from
+        rounded_corner_radius_bottom to more accurately provide a "radius" for the bottom rounded
+        corners. -->
+    <!-- <dimen name="rounded_corner_radius_bottom_adjustment">4px</dimen> -->
+
+    <!-- for 20dp of padding at 3.5px/dp at default density -->
+    <!-- <dimen name="rounded_corner_content_padding">50px</dimen> -->
+
+    <!-- Component name for the activity that will be presenting the Recents UI, which will receive
+         special permissions for API related to fetching and presenting recent tasks. The default
+         configuration uses Launcehr3QuickStep as default launcher and points to the corresponding
+         recents component. When using a different default launcher, change this appropriately or
+         use the default systemui implementation: com.android.systemui/.recents.RecentsActivity -->
+    <!-- <string name="config_recentsComponentName" translatable="false"
+            >com.android.launcher3/com.android.quickstep.RecentsActivity</string> -->
+</resources>

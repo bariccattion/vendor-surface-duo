@@ -1,0 +1,13 @@
+hidl_interface {
+    name: "vendor.surface.touchpen@1.2",
+    root: "vendor.surface",
+    srcs: [
+        "ITouchPen.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+        "vendor.surface.touchpen@1.0",
+        "vendor.surface.touchpen@1.1",
+    ],
+    gen_java: true,
+}

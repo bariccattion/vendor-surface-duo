@@ -1,3 +1,5 @@
+# DUO-DE Vendor Config — unified from ponces/vendor_ponces + Archfx/duoVendor + Archfx/duoOverlays
+
 # Overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/duo-de/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/duo-de/overlay/common
@@ -9,6 +11,15 @@ PRODUCT_COPY_FILES += \
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/duo-de/config/permissions/custom-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/custom-power-whitelist.xml
+
+# DUO-DE privapp permissions
+PRODUCT_COPY_FILES += \
+    vendor/duo-de/config/permissions/privapp-permissions-duo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-duo.xml
+
+# Boot animation
+PRODUCT_COPY_FILES += \
+    vendor/duo-de/prebuilts/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
+    vendor/duo-de/prebuilts/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 
 # Enable lockscreen live wallpaper
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -22,5 +33,31 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
-# RRO Overlays
-$(call inherit-product, vendor/duo-de/config/rro_overlays.mk)
+# Posture Processor Service
+PRODUCT_PACKAGES += \
+    PostureProcessor
+
+# GSI RRO Overlays (from ponces)
+PRODUCT_PACKAGES += \
+    GsiDocumentsUIOverlay \
+    GsiFrameworksOverlay \
+    GsiLauncher3Overlay \
+    GsiSettingsProviderOverlay \
+    GsiSystemUIOverlay \
+    GsiWifiOverlay
+
+# DUO-DE RRO Overlays (from duoOverlays)
+PRODUCT_PACKAGES += \
+    Duo1DisplayFeaturesOverlay \
+    Duo1DisplayFeaturesWMShellOverlay \
+    Duo1NoHingeAndroidOverlay \
+    Duo1NoHingeWMShellOverlay \
+    Duo2DisplayFeaturesOverlay \
+    Duo2DisplayFeaturesWMShellOverlay \
+    Duo2NoHingeAndroidOverlay \
+    Duo2NoHingeWMShellOverlay \
+    Duo2PostureProcessorOverlay \
+    DuoAppHintingOverlay \
+    DuoDisplayFeaturesOverlay \
+    DuoSettingsIconsOverlay \
+    DuoSettingsOverlay
