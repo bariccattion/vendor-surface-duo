@@ -25,10 +25,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.wm.debug.lockscreen_live_wallpaper=true
 
-# One Handed mode
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode?=true
-
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
