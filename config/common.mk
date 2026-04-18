@@ -18,8 +18,8 @@ PRODUCT_COPY_FILES += \
 
 # Boot animation
 PRODUCT_COPY_FILES += \
-    vendor/surface-duo/prebuilts/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
-    vendor/surface-duo/prebuilts/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+    vendor/surface-duo/prebuilt/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
+    vendor/surface-duo/prebuilt/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 
 # Enable lockscreen live wallpaper
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
