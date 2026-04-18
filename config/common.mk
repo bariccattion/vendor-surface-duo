@@ -31,7 +31,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Posture Processor Service
 PRODUCT_PACKAGES += \
-    PostureProcessor
+    PostureProcessor \
+    libms_pen_charger
+
+# Surface Duo permissions and device state config
+PRODUCT_COPY_FILES += \
+    vendor/surface-duo/config/permissions/com.microsoft.surface.duo_v1.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.microsoft.surface.duo_v1.xml \
+    vendor/surface-duo/config/device_state_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/devicestate/device_state_configuration.xml
 
 # GSI RRO Overlays (from ponces)
 PRODUCT_PACKAGES += \

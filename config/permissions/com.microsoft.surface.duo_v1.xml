@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.microsoft.surface.duo_v1">
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE" />
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE" />
+    </privapp-permissions>
+</permissions>
